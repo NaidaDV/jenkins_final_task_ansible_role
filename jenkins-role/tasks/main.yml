@@ -1,19 +1,4 @@
 ---
- #- name: add key for docker
- #  apt_key:
- #    url: https://download.docker.com/linux/ubuntu/gpg
-  #   state: present
-
- # - name: Add doker repository
-  #  apt_repository:
-  #    repo: 'deb https://download.docker.com/linux/ubuntu bionic stable'
-  #    state: present
-
-  #- name: updating system
-  #  apt:
-  #    upgrade: yes
- #     update_cache: yes
-
  - name: installing docker
    apt: 
      name: docker.io 
@@ -27,6 +12,11 @@
       
  - name: applying new group for user
    command: "newgrp docker"
+   
+ - name: adding dir in /tmp
+   file:
+      path: /tmp/final_task
+      state: directory
 
  - name: copy Dockerfile
    copy:
@@ -58,6 +48,3 @@
      ports:
        - "8080:8080"
      state: started
-#      command: cat /var/jenkins_home/secrets/initialAdminPassword
-#      volumes:
-#        - jenkins_home:/home/ubuntu/jenkins_home
