@@ -2,3 +2,4 @@ git
 docker
 ec2
 docker-workflow
+ssh-agent
