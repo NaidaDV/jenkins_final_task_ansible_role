@@ -1,5 +1,6 @@
 git
 docker
+workflow-aggregator
 ec2
 docker-workflow
 ssh-agent
