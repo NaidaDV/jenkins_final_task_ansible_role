@@ -45,6 +45,7 @@
    docker_container:
      name: jenkins-for-final-task-container
      image: jenkins-for-final-task
+     env_file: /tmp/final_task/environments.env
      ports:
        - "8080:8080"
      state: started
