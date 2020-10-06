@@ -5,4 +5,4 @@ workflow-aggregator
 ec2
 docker-workflow
 ssh-agent
-ws-cleanup-plugin
+ws-cleanup
